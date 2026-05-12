@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<!-- saved from url=(0047)file:///C:/Users/Michael/Downloads/admin_4.html -->
+<!-- saved from url=(0047)file:///C:/Users/Michael/Downloads/admin_7.html -->
 <html lang="he" dir="rtl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ניהול — בת המצווה של אמה</title>
 <link href="./admin_files/css2" rel="stylesheet">
@@ -18,8 +17,6 @@ html,body{min-height:100%;background:#F8F4EC;font-family:'Heebo',sans-serif;dire
 .nav-btn.active{color:#8B6820;border-bottom-color:#C8A04A;font-weight:600;}
 .section{display:none;padding:16px;}
 .section.active{display:block;}
-
-/* STATS */
 .stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px;}
 .stat-box{background:white;border:1px solid #E8CC88;border-radius:10px;padding:10px 4px;text-align:center;}
 .stat-num{font-size:20px;font-weight:700;}
@@ -28,20 +25,14 @@ html,body{min-height:100%;background:#F8F4EC;font-family:'Heebo',sans-serif;dire
 .stat-box.no .stat-num{color:#C05030;}
 .stat-box.wait .stat-num{color:#C8A04A;}
 .stat-box.total .stat-num{color:#8B6820;}
-
-/* BUTTONS */
 .gold-btn{width:100%;padding:10px;border:none;border-radius:10px;background:linear-gradient(135deg,#C8A04A,#A07830);color:white;cursor:pointer;font-family:'Heebo',sans-serif;font-size:13px;font-weight:600;margin-bottom:10px;transition:all .2s;}
 .gold-btn:hover{filter:brightness(1.1);}
 .outline-btn{width:100%;padding:9px;border:1px solid #E8CC88;border-radius:10px;background:white;color:#A08040;cursor:pointer;font-family:'Heebo',sans-serif;font-size:12px;margin-bottom:10px;transition:all .2s;}
 .outline-btn:hover{background:#FFFDF5;}
 .last-update{font-size:10px;color:#C0A070;text-align:center;margin-bottom:8px;}
-
-/* FILTERS */
 .filter-row{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap;}
 .flt{padding:4px 10px;border:1px solid #E8CC88;border-radius:20px;background:white;cursor:pointer;font-family:'Heebo',sans-serif;font-size:11px;color:#A08040;transition:all .2s;}
 .flt.on{background:#C8A04A;color:white;border-color:#C8A04A;font-weight:600;}
-
-/* GUEST LIST */
 .guest-list{display:flex;flex-direction:column;gap:7px;}
 .grow{background:white;border:1px solid #E8CC88;border-radius:10px;padding:10px 12px;display:flex;align-items:center;gap:9px;}
 .gavatar{width:32px;height:32px;border-radius:50%;background:#F5E8C0;color:#8B6820;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:11px;flex-shrink:0;}
@@ -54,8 +45,6 @@ html,body{min-height:100%;background:#F8F4EC;font-family:'Heebo',sans-serif;dire
 .bw{background:#FEF8E8;color:#A07830;border:1px solid #E8CC88;}
 .empty{text-align:center;padding:20px;color:#C0A070;font-size:13px;}
 .loading{text-align:center;padding:20px;color:#C0A070;font-size:13px;}
-
-/* ADD GUEST FORM */
 .card{background:white;border:1.5px solid #E8CC88;border-radius:14px;padding:18px;margin-bottom:14px;}
 .card-title{font-family:'Cormorant Garamond',serif;font-size:17px;color:#8B6820;font-style:italic;margin-bottom:14px;}
 .flabel{display:block;font-size:12px;color:#A08040;margin-bottom:5px;font-weight:500;}
@@ -68,8 +57,6 @@ select.finput{cursor:pointer;}
 .add-btn{width:100%;padding:10px;border:none;border-radius:10px;background:#C8A04A;color:white;cursor:pointer;font-family:'Heebo',sans-serif;font-size:13px;font-weight:600;transition:all .2s;}
 .add-btn:hover{background:#A07830;}
 .success-add{background:#F0FBF2;border:1px solid #A8D8B0;border-radius:8px;padding:8px;text-align:center;color:#3A8A50;font-size:12px;margin-top:8px;display:none;}
-
-/* IMPORT */
 .import-area{border:2px dashed #E8CC88;border-radius:12px;padding:24px;text-align:center;cursor:pointer;transition:all .2s;background:#FFFDF5;margin-bottom:12px;}
 .import-area:hover{border-color:#C8A04A;background:#FFF8E8;}
 .import-icon{font-size:28px;display:block;margin-bottom:8px;color:#C8A04A;}
@@ -77,8 +64,6 @@ select.finput{cursor:pointer;}
 .import-sub{font-size:11px;color:#C0A070;margin-top:4px;}
 .import-result{background:#F0FBF2;border:1px solid #A8D8B0;border-radius:8px;padding:10px;text-align:center;color:#3A8A50;font-size:12px;margin-top:8px;display:none;}
 .template-btn{width:100%;padding:9px;border:1px solid #E8CC88;border-radius:10px;background:white;color:#A08040;cursor:pointer;font-family:'Heebo',sans-serif;font-size:12px;margin-top:8px;}
-
-/* REMINDERS */
 .remind-item{display:flex;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid #F5E8C0;}
 .remind-item:last-child{border-bottom:none;padding-bottom:0;}
 .remind-icon-box{width:38px;height:38px;border-radius:10px;background:#FFFDF5;border:1px solid #E8CC88;display:flex;align-items:center;justify-content:center;color:#C8A04A;flex-shrink:0;}
@@ -94,132 +79,132 @@ select.finput{cursor:pointer;}
 .wa-btn.gold{background:linear-gradient(135deg,#C8A04A,#A07830);margin-top:6px;}
 textarea.finput{resize:none;}
 .sent-note{background:#F0FBF2;border:1px solid #A8D8B0;border-radius:8px;padding:8px;text-align:center;color:#3A8A50;font-size:12px;margin-top:6px;display:none;}
+.error-note{background:#FEF0EC;border:1px solid #F0C0A8;border-radius:8px;padding:8px;text-align:center;color:#C05030;font-size:11px;margin-bottom:8px;display:none;}
 </style>
 </head>
 <body>
 <div class="page">
-  <div class="header">
-    <h1>ניהול — בת המצווה של אמה ✦</h1>
-    <p>דף זה מיועד למארגנים בלבד</p>
-  </div>
-  <nav class="nav">
-    <button class="nav-btn active" onclick="showSection(&#39;dashboard&#39;,this)">סקירה</button>
-    <button class="nav-btn" onclick="showSection(&#39;add&#39;,this)">הוסף</button>
-    <button class="nav-btn" onclick="showSection(&#39;import&#39;,this)">ייבוא</button>
-    <button class="nav-btn" onclick="showSection(&#39;reminders&#39;,this)">תזכורות</button>
-  </nav>
+<div class="header">
+  <h1>ניהול — בת המצווה של אמה ✦</h1>
+  <p>דף זה מיועד למארגנים בלבד</p>
+</div>
+<nav class="nav">
+  <button class="nav-btn active" onclick="showSection(&#39;dashboard&#39;,this)">סקירה</button>
+  <button class="nav-btn" onclick="showSection(&#39;add&#39;,this)">הוסף</button>
+  <button class="nav-btn" onclick="showSection(&#39;import&#39;,this)">ייבוא</button>
+  <button class="nav-btn" onclick="showSection(&#39;reminders&#39;,this)">תזכורות</button>
+</nav>
 
-  <!-- סקירה -->
-  <div id="sec-dashboard" class="section active">
-    <div class="stats-row">
-      <div class="stat-box total"><div class="stat-num" id="s-total">2</div><div class="stat-lbl">סה"כ מוזמנים</div></div>
-      <div class="stat-box go"><div class="stat-num" id="s-go">6</div><div class="stat-lbl">כמות מגיעים</div></div>
-      <div class="stat-box no"><div class="stat-num" id="s-no">0</div><div class="stat-lbl">לא מגיעים</div></div>
-      <div class="stat-box wait"><div class="stat-num" id="s-wait">0</div><div class="stat-lbl">ממתינים</div></div>
-    </div>
-    <div class="last-update" id="last-update">עודכן: 14:31:29</div>
-    <button class="outline-btn" onclick="loadRsvps()">רענן אישורים ↻</button>
-    <button class="gold-btn" onclick="exportExcel()">הורד רשימה לאקסל ✦</button>
-    <button class="outline-btn" style="color:#C05030;border-color:#F0C0A8;" onclick="resetAll()">אפס את כל נתוני הבדיקה 🗑️</button>
-    <div class="filter-row">
-      <button class="flt on" onclick="filter(&#39;all&#39;,this)">הכל</button>
-      <button class="flt" onclick="filter(&#39;מגיע&#39;,this)">מגיעים</button>
-      <button class="flt" onclick="filter(&#39;לא מגיע&#39;,this)">לא מגיעים</button>
-      <button class="flt" onclick="filter(&#39;ממתין&#39;,this)">ממתינים</button>
-    </div>
-    <div class="filter-row" id="group-filters"></div>
-    <div class="guest-list" id="glist"><div class="grow"><div class="gavatar">לא</div><div class="ginfo"><div class="gname">לירון אבינועם</div><div class="gmeta"></div></div><span class="gbadge bg">✓ 4 מגיעים</span></div><div class="grow"><div class="gavatar">מ</div><div class="ginfo"><div class="gname">מיכאל</div><div class="gmeta"></div></div><span class="gbadge bg">✓ 2 מגיעים</span></div></div>
+<!-- סקירה -->
+<div id="sec-dashboard" class="section active">
+  <div class="stats-row">
+    <div class="stat-box total"><div class="stat-num" id="s-total">0</div><div class="stat-lbl">סה"כ מוזמנים</div></div>
+    <div class="stat-box go"><div class="stat-num" id="s-go">0</div><div class="stat-lbl">כמות מגיעים</div></div>
+    <div class="stat-box no"><div class="stat-num" id="s-no">0</div><div class="stat-lbl">לא מגיעים</div></div>
+    <div class="stat-box wait"><div class="stat-num" id="s-wait">0</div><div class="stat-lbl">ממתינים</div></div>
   </div>
+  <div class="last-update" id="last-update">שגיאת חיבור — 9:04:47</div>
+  <div class="error-note" id="fetch-error" style="display: block;">⚠️ לא ניתן להתחבר ל-Google Sheets. מציג נתונים מהדפדפן בלבד.</div>
+  <button class="outline-btn" onclick="loadRsvps()">רענן אישורים ↻</button>
+  <button class="gold-btn" onclick="exportExcel()">הורד רשימה לאקסל ✦</button>
+  <button class="outline-btn" style="color:#C05030;border-color:#F0C0A8;" onclick="resetAll()">אפס את כל נתוני הבדיקה 🗑️</button>
+  <div class="filter-row">
+    <button class="flt on" onclick="filter(&#39;all&#39;,this)">הכל</button>
+    <button class="flt" onclick="filter(&#39;מגיע&#39;,this)">מגיעים</button>
+    <button class="flt" onclick="filter(&#39;לא מגיע&#39;,this)">לא מגיעים</button>
+    <button class="flt" onclick="filter(&#39;ממתין&#39;,this)">ממתינים</button>
+  </div>
+  <div class="filter-row" id="group-filters"></div>
+  <div class="guest-list" id="glist"><div class="loading">טוען...</div></div>
+</div>
 
-  <!-- הוסף מוזמן -->
-  <div id="sec-add" class="section">
-    <div class="card">
-      <div class="card-title">הוסף מוזמן ידנית</div>
-      <div class="fgroup"><label class="flabel">שם מלא</label><input class="finput" id="a-name" type="text" placeholder="ישראל ישראלי"></div>
-      <div class="row2">
-        <div class="fgroup"><label class="flabel">טלפון</label><input class="finput" id="a-phone" type="tel" placeholder="050-0000000"></div>
-        <div class="fgroup"><label class="flabel">קבוצה</label>
-          <select class="finput" id="a-group">
-            <option value="משפחה">משפחה</option>
-            <option value="חברים">חברים</option>
-            <option value="עבודה">עבודה</option>
-            <option value="אחר">אחר</option>
-          </select>
-        </div>
+<!-- הוסף מוזמן -->
+<div id="sec-add" class="section">
+  <div class="card">
+    <div class="card-title">הוסף מוזמן ידנית</div>
+    <div class="fgroup"><label class="flabel">שם מלא</label><input class="finput" id="a-name" type="text" placeholder="ישראל ישראלי"></div>
+    <div class="row2">
+      <div class="fgroup"><label class="flabel">טלפון</label><input class="finput" id="a-phone" type="tel" placeholder="050-0000000"></div>
+      <div class="fgroup"><label class="flabel">קבוצה</label>
+        <select class="finput" id="a-group">
+          <option value="משפחה">משפחה</option>
+          <option value="חברים">חברים</option>
+          <option value="עבודה">עבודה</option>
+          <option value="אחר">אחר</option>
+        </select>
       </div>
-      <button class="add-btn" onclick="addGuest()">הוסף מוזמן ✦</button>
-      <div class="success-add" id="success-add">המוזמן נוסף בהצלחה!</div>
     </div>
-    <div class="card">
-      <div class="card-title">רשימת מוזמנים</div>
-      <div class="guest-list" id="inv-list"><div class="empty">עדיין אין מוזמנים</div></div>
+    <button class="add-btn" onclick="addGuest()">הוסף מוזמן ✦</button>
+    <div class="success-add" id="success-add">המוזמן נוסף בהצלחה!</div>
+  </div>
+  <div class="card">
+    <div class="card-title">רשימת מוזמנים</div>
+    <div class="guest-list" id="inv-list"><div class="empty">עדיין אין מוזמנים</div></div>
+  </div>
+</div>
+
+<!-- ייבוא -->
+<div id="sec-import" class="section">
+  <div class="card">
+    <div class="card-title">ייבוא רשימה מאקסל</div>
+    <div class="import-area" onclick="document.getElementById(&#39;file-input&#39;).click()">
+      <span class="import-icon">📁</span>
+      <div class="import-text">לחצי לבחירת קובץ Excel או CSV</div>
+      <div class="import-sub">עמודות נדרשות: שם | טלפון | קבוצה</div>
+    </div>
+    <input type="file" id="file-input" accept=".xlsx,.xls,.csv" style="display:none" onchange="importFile(this)">
+    <div class="import-result" id="import-result"></div>
+    <button class="template-btn" onclick="downloadTemplate()">הורד תבנית אקסל לדוגמה</button>
+  </div>
+  <div class="card">
+    <div class="card-title">הוראות</div>
+    <div style="font-size:12px;color:#A08040;line-height:2;">
+      <div>1. הורידי את תבנית האקסל</div>
+      <div>2. מלאי שמות, טלפונים וקבוצות</div>
+      <div>3. העלי בחזרה — הרשימה תיטען אוטומטית</div>
+      <div style="margin-top:8px;color:#C8A04A;">✦ ניתן גם לייצא את אנשי הקשר מהטלפון ל-CSV</div>
     </div>
   </div>
+</div>
 
-  <!-- ייבוא -->
-  <div id="sec-import" class="section">
-    <div class="card">
-      <div class="card-title">ייבוא רשימה מאקסל</div>
-      <div class="import-area" onclick="document.getElementById(&#39;file-input&#39;).click()">
-        <span class="import-icon">📁</span>
-        <div class="import-text">לחצי לבחירת קובץ Excel או CSV</div>
-        <div class="import-sub">עמודות נדרשות: שם | טלפון | קבוצה</div>
-      </div>
-      <input type="file" id="file-input" accept=".xlsx,.xls,.csv" style="display:none" onchange="importFile(this)">
-      <div class="import-result" id="import-result"></div>
-      <button class="template-btn" onclick="downloadTemplate()">הורד תבנית אקסל לדוגמה</button>
+<!-- תזכורות -->
+<div id="sec-reminders" class="section">
+  <div class="card">
+    <div class="card-title">תזכורות מתוכננות</div>
+    <div class="remind-item">
+      <div class="remind-icon-box">✦</div>
+      <div class="remind-info"><div class="remind-name">שבוע לפני האירוע</div><div class="remind-when">26.5.2026</div></div>
+      <span class="rbadge rs-ok" id="r1-badge">בעוד 14 ימים</span>
     </div>
-    <div class="card">
-      <div class="card-title">הוראות</div>
-      <div style="font-size:12px;color:#A08040;line-height:2;">
-        <div>1. הורידי את תבנית האקסל</div>
-        <div>2. מלאי שמות, טלפונים וקבוצות</div>
-        <div>3. העלי בחזרה — הרשימה תיטען אוטומטית</div>
-        <div style="margin-top:8px;color:#C8A04A;">✦ ניתן גם לייצא את אנשי הקשר מהטלפון ל-CSV</div>
-      </div>
+    <div class="remind-item">
+      <div class="remind-icon-box">✦</div>
+      <div class="remind-info"><div class="remind-name">יום לפני האירוע</div><div class="remind-when">1.6.2026</div></div>
+      <span class="rbadge rs-ok" id="r2-badge">בעוד 20 ימים</span>
     </div>
+    <button class="wa-btn" onclick="sendWeek()">שלח תזכורת — שבוע לפני</button>
+    <button class="wa-btn gold" onclick="sendDay()">שלח תזכורת — יום לפני</button>
   </div>
-
-  <!-- תזכורות -->
-  <div id="sec-reminders" class="section">
-    <div class="card">
-      <div class="card-title">תזכורות מתוכננות</div>
-      <div class="remind-item">
-        <div class="remind-icon-box">✦</div>
-        <div class="remind-info"><div class="remind-name">שבוע לפני האירוע</div><div class="remind-when">26.5.2026</div></div>
-        <span class="rbadge rs-ok" id="r1-badge">בעוד 20 ימים</span>
-      </div>
-      <div class="remind-item">
-        <div class="remind-icon-box">✦</div>
-        <div class="remind-info"><div class="remind-name">יום לפני האירוע</div><div class="remind-when">1.6.2026</div></div>
-        <span class="rbadge rs-ok" id="r2-badge">בעוד 26 ימים</span>
-      </div>
-      <button class="wa-btn" onclick="sendWeek()">שלח תזכורת — שבוע לפני</button>
-      <button class="wa-btn gold" onclick="sendDay()">שלח תזכורת — יום לפני</button>
-    </div>
-    <div class="card">
-      <div class="card-title">הודעה חופשית</div>
-      <div class="fgroup">
-        <label class="flabel">תוכן ההודעה</label>
-        <textarea class="finput" id="custom-msg" rows="5">שלום לכולם!
+  <div class="card">
+    <div class="card-title">הודעה חופשית</div>
+    <div class="fgroup">
+      <label class="flabel">תוכן ההודעה</label>
+      <textarea class="finput" id="custom-msg" rows="5">שלום לכולם!
 רוצים להזכיר לכם על בת המצווה של אמה גבריאלי.
 📅 2.6.2026 | 🕖 19:30
 📍 אולמי AYWA, הטייסים 56 אשקלון
 מחכים לראותכם!
 המשפחה האוהבת ✦</textarea>
-      </div>
-      <button class="wa-btn" onclick="sendCustom()">פתח ווצאפ עם ההודעה</button>
-      <div class="sent-note" id="sent-note">ווצאפ נפתח!</div>
     </div>
+    <button class="wa-btn" onclick="sendCustom()">פתח ווצאפ עם ההודעה</button>
+    <div class="sent-note" id="sent-note">ווצאפ נפתח!</div>
   </div>
 </div>
 
+</div>
 <script>
 const SCRIPT_URL='https://script.google.com/macros/s/AKfycbwCzcKMznH2V8Fv8sS7cYGRredoA-OeY_0giuYxauz78yDYBDHFTWnkvfrp5gyFuJLS/exec';
 
-// רשימת מוזמנים — נשמרת בדפדפן
 let invitees = JSON.parse(localStorage.getItem('ama_invitees')||'[]');
-// אישורים — מגיעים מ-Google Sheets
 let rsvps = [];
 let curFilter = 'all';
 let curGroup = 'all';
@@ -237,37 +222,51 @@ function showSection(id,btn){
 }
 
 function loadRsvps(){
+  document.getElementById('last-update').textContent='מרענן...';
   fetch(SCRIPT_URL)
     .then(r=>r.json())
     .then(data=>{
-      rsvps=Array.isArray(data)?data.filter(g=>g['שם']):[]; 
+      document.getElementById('fetch-error').style.display='none';
+      rsvps=Array.isArray(data)?data.filter(g=>g['שם']):[];
       renderDashboard();
       document.getElementById('last-update').textContent='עודכן: '+new Date().toLocaleTimeString('he-IL');
     })
-    .catch(()=>{});
+    .catch(()=>{
+      document.getElementById('fetch-error').style.display='block';
+      document.getElementById('last-update').textContent='שגיאת חיבור — ' + new Date().toLocaleTimeString('he-IL');
+      renderDashboard();
+    });
 }
 
 function getMerged(){
-  // מיזוג רשימת מוזמנים עם אישורים
   const rsvpMap={};
-  rsvps.forEach(r=>{rsvpMap[r['שם']]={status:r['סטטוס'],count:r['כמות'],note:r['הערה']||'',date:r['תאריך']||''};});
-  
-  if(invitees.length===0){
-    // אם אין רשימה — הצג רק את מי שענה
-    return rsvps.map(r=>({name:r['שם'],phone:'',group:'',status:r['סטטוס'],count:r['כמות'],note:r['הערה']||''}));
-  }
-  
-  return invitees.map(inv=>{
-    const r=rsvpMap[inv.name]||{};
-    return {
-      name:inv.name,
-      phone:inv.phone||'',
-      group:inv.group||'',
-      status:r.status||'ממתין',
-      count:r.count||0,
-      note:r.note||''
-    };
+  rsvps.forEach(r=>{
+    const name=(r['שם']||'').trim();
+    if(name) rsvpMap[name]={status:r['סטטוס'],count:r['כמות'],note:r['הערה']||'',date:r['תאריך']||''};
   });
+
+  // אם יש רשימת מוזמנים — מיזוג עם אישורים
+  if(invitees.length > 0){
+    const result = invitees.map(inv=>{
+      const r=rsvpMap[inv.name]||{};
+      return {name:inv.name,phone:inv.phone||'',group:inv.group||'',status:r.status||'ממתין',count:r.count||0,note:r.note||''};
+    });
+    // הוסף מי שענה אבל לא ברשימה
+    rsvps.forEach(r=>{
+      const name=(r['שם']||'').trim();
+      if(name && !invitees.find(i=>i.name===name)){
+        result.push({name,phone:'',group:'',status:r['סטטוס'],count:r['כמות'],note:r['הערה']||''});
+      }
+    });
+    return result;
+  }
+
+  // אין רשימת מוזמנים — הצג רק מי שענה
+  if(rsvps.length > 0){
+    return rsvps.map(r=>({name:(r['שם']||'').trim(),phone:'',group:'',status:r['סטטוס'],count:r['כמות'],note:r['הערה']||''}));
+  }
+
+  return [];
 }
 
 function renderDashboard(){
@@ -277,8 +276,9 @@ function renderDashboard(){
   const wait=merged.filter(g=>g.status==='ממתין').length;
   const total=merged.length;
   const people=merged.filter(g=>g.status==='מגיע').reduce((a,g)=>a+(parseInt(g.count)||0),0);
+
   document.getElementById('s-total').textContent=total;
-  document.getElementById("s-go").textContent=people;
+  document.getElementById('s-go').textContent=people;
   document.getElementById('s-no').textContent=no;
   document.getElementById('s-wait').textContent=wait;
 
@@ -287,7 +287,9 @@ function renderDashboard(){
   const gf=document.getElementById('group-filters');
   if(groups.length>0){
     gf.innerHTML='<button class="flt '+(curGroup==='all'?'on':'')+'" onclick="filterGroup(\'all\',this)">כל הקבוצות</button>'+
-    groups.map(g=>'<button class="flt '+(curGroup===g?'on':'')+'" onclick="filterGroup(\''+g+'\',this)">'+g+'</button>').join('');
+      groups.map(g=>'<button class="flt '+(curGroup===g?'on':'')+'" onclick="filterGroup(\''+g+'\',this)">'+g+'</button>').join('');
+  } else {
+    gf.innerHTML='';
   }
 
   let filtered=merged;
@@ -295,7 +297,15 @@ function renderDashboard(){
   if(curGroup!=='all')filtered=filtered.filter(g=>g.group===curGroup);
 
   const list=document.getElementById('glist');
-  if(!filtered.length){list.innerHTML='<div class="empty">אין נתונים ✦</div>';return;}
+  if(!filtered.length){
+    if(merged.length===0){
+      list.innerHTML='<div class="empty">אין נתונים עדיין.<br>הוסף מוזמנים בלשונית "הוסף" ✦</div>';
+    } else {
+      list.innerHTML='<div class="empty">אין נתונים לפילטר הנוכחי ✦</div>';
+    }
+    return;
+  }
+
   list.innerHTML=filtered.map(g=>{
     const init=g.name.split(' ').map(w=>w[0]).join('').slice(0,2);
     const bc=g.status==='מגיע'?'bg':g.status==='לא מגיע'?'bn':'bw';
@@ -397,7 +407,6 @@ function downloadTemplate(){
   const data=[{'שם':'ישראל ישראלי','טלפון':'050-1234567','קבוצה':'משפחה'},{'שם':'שרה כהן','טלפון':'052-9876543','קבוצה':'חברים'}];
   const ws=XLSX.utils.json_to_sheet(data,{header:['שם','טלפון','קבוצה']});
   ws['!cols']=[{wch:22},{wch:15},{wch:12}];
-  ws['!rtl']=true;
   const wb=XLSX.utils.book_new();
   XLSX.utils.book_append_sheet(wb,ws,'מוזמנים');
   XLSX.writeFile(wb,'template_invitees.xlsx');
@@ -412,7 +421,6 @@ function exportExcel(){
   data.push({'שם':'סה"כ מגיעים','טלפון':'','קבוצה':'','סטטוס':'','מגיעים':goTotal,'הערה':''});
   const ws=XLSX.utils.json_to_sheet(data,{header:['שם','טלפון','קבוצה','סטטוס','מגיעים','הערה']});
   ws['!cols']=[{wch:20},{wch:14},{wch:10},{wch:12},{wch:8},{wch:20}];
-  ws['!rtl']=true;
   const wb=XLSX.utils.book_new();
   XLSX.utils.book_append_sheet(wb,ws,'מוזמנים');
   XLSX.writeFile(wb,'ama_full_guests.xlsx');
@@ -423,7 +431,11 @@ function updateBadges(){
   const ev=new Date('2026-06-02');
   const w=new Date(ev);w.setDate(w.getDate()-7);
   const d=new Date(ev);d.setDate(d.getDate()-1);
-  function badge(el,t){const diff=t-now;if(diff<0){el.className='rbadge rs-past';el.textContent='עבר';}else{const days=Math.ceil(diff/86400000);el.className='rbadge '+(days<=3?'rs-soon':'rs-ok');el.textContent='בעוד '+days+' ימים';}}
+  function badge(el,t){
+    const diff=t-now;
+    if(diff<0){el.className='rbadge rs-past';el.textContent='עבר';}
+    else{const days=Math.ceil(diff/86400000);el.className='rbadge '+(days<=3?'rs-soon':'rs-ok');el.textContent='בעוד '+days+' ימים';}
+  }
   badge(document.getElementById('r1-badge'),w);
   badge(document.getElementById('r2-badge'),d);
 }
@@ -437,9 +449,17 @@ function resetAll(){
   renderInvList();
   alert("הנתונים אופסו! כעת מחק גם את השורות בGoogle Sheets.");
 }
+
 function sendWeek(){window.open('https://wa.me/?text='+encodeURIComponent('שלום לכולם!\nעוד שבוע — בת המצווה של אמה גבריאלי!\n📅 2.6.2026 | 🕖 19:30\n📍 אולמי AYWA, הטייסים 56 אשקלון\nמחכים לראותכם!\nהמשפחה האוהבת'));}
 function sendDay(){window.open('https://wa.me/?text='+encodeURIComponent('שלום לכולם!\nמחר — בת המצווה של אמה גבריאלי!\n📅 2.6.2026 | 🕖 19:30\n📍 אולמי AYWA, הטייסים 56 אשקלון\nמחכים לראותכם!\nהמשפחה האוהבת'));}
-function sendCustom(){const msg=document.getElementById('custom-msg').value.trim();if(!msg)return;window.open('https://wa.me/?text='+encodeURIComponent(msg));const sn=document.getElementById('sent-note');sn.style.display='block';setTimeout(()=>sn.style.display='none',3000);}
+function sendCustom(){
+  const msg=document.getElementById('custom-msg').value.trim();
+  if(!msg)return;
+  window.open('https://wa.me/?text='+encodeURIComponent(msg));
+  const sn=document.getElementById('sent-note');
+  sn.style.display='block';
+  setTimeout(()=>sn.style.display='none',3000);
+}
 
 // טעינה ראשונית
 loadRsvps();
@@ -447,6 +467,5 @@ renderInvList();
 updateBadges();
 setInterval(loadRsvps,30000);
 </script>
-
 
 </body></html>
