@@ -248,20 +248,20 @@ function getMerged(){
   const rsvpMap={};
   rsvps.forEach(r=>{
     const name=String(r['שם']||'').trim();
-    if(name) rsvpMap[name]={status:r['סטטוס'],count:r['כמות'],note:r['הערה']||'',date:r['תאריך']||''};
+    if(name) rsvpMap[name]={status:String(r['סטטוס']||''),count:String(r['כמות']||''),note:String(r['הערה']||''),date:String(r['תאריך']||'')};
   });
 
   // אם יש רשימת מוזמנים — מיזוג עם אישורים
   if(invitees.length > 0){
     const result = invitees.map(inv=>{
       const r=rsvpMap[inv.name]||{};
-      return {name:inv.name,phone:inv.phone||'',group:inv.group||'',status:r.status||'ממתין',count:r.count||0,note:r.note||''};
+      return {name:String(inv.name||''),phone:String(inv.phone||''),group:String(inv.group||''),status:String(r.status||'ממתין'),count:String(r.count||'0'),note:String(r.note||'')};
     });
     // הוסף מי שענה אבל לא ברשימה
     rsvps.forEach(r=>{
       const name=String(r['שם']||'').trim();
       if(name && !invitees.find(i=>i.name===name)){
-        result.push({name,phone:'',group:'',status:r['סטטוס'],count:r['כמות'],note:r['הערה']||''});
+        result.push({name,phone:'',group:'',status:String(r['סטטוס']||''),count:String(r['כמות']||''),note:String(r['הערה']||'')});
       }
     });
     return result;
@@ -269,7 +269,7 @@ function getMerged(){
 
   // אין רשימת מוזמנים — הצג רק מי שענה
   if(rsvps.length > 0){
-    return rsvps.map(r=>({name:(r['שם']||'').trim(),phone:'',group:'',status:r['סטטוס'],count:r['כמות'],note:r['הערה']||''}));
+    return rsvps.map(r=>({name:String(r['שם']||'').trim(),phone:'',group:'',status:String(r['סטטוס']||''),count:String(r['כמות']||''),note:String(r['הערה']||'')}));
   }
 
   return [];
