@@ -202,7 +202,7 @@ textarea.finput{resize:none;}
 
 </div>
 <script>
-const SCRIPT_URL='https://script.google.com/macros/s/AKfycbzeTT5QmjG7w5RkkbWAlzj4XmOM-iZ47WXX5E930u3HLN5jJTI9pZnUbQ37VT8xG4eLSA/exec';
+const SCRIPT_URL='https://script.google.com/macros/s/AKfycbz5ylpIZdGlEYHqL5kRvBBneZjOw7c6-RIo8ECOSFchbVvOLvq1tJE7rnWQtojFj1QPZg/exec';
 
 let invitees = JSON.parse(localStorage.getItem('ama_invitees')||'[]');
 let rsvps = [];
@@ -223,19 +223,25 @@ function showSection(id,btn){
 
 function loadRsvps(){
   document.getElementById('last-update').textContent='מרענן...';
-  fetch(SCRIPT_URL)
-    .then(r=>r.json())
-    .then(data=>{
-      document.getElementById('fetch-error').style.display='none';
-      rsvps=Array.isArray(data)?data.filter(g=>g['שם']):[];
-      renderDashboard();
-      document.getElementById('last-update').textContent='עודכן: '+new Date().toLocaleTimeString('he-IL');
-    })
-    .catch(()=>{
-      document.getElementById('fetch-error').style.display='block';
-      document.getElementById('last-update').textContent='שגיאת חיבור — ' + new Date().toLocaleTimeString('he-IL');
-      renderDashboard();
-    });
+  const cbName = 'cb_' + Date.now();
+  const script = document.createElement('script');
+  window[cbName] = function(data) {
+    document.getElementById('fetch-error').style.display='none';
+    rsvps=Array.isArray(data)?data.filter(g=>g['שם']):[];
+    renderDashboard();
+    document.getElementById('last-update').textContent='עודכן: '+new Date().toLocaleTimeString('he-IL');
+    delete window[cbName];
+    document.body.removeChild(script);
+  };
+  script.onerror = function() {
+    document.getElementById('fetch-error').style.display='block';
+    document.getElementById('last-update').textContent='שגיאת חיבור — ' + new Date().toLocaleTimeString('he-IL');
+    renderDashboard();
+    delete window[cbName];
+    document.body.removeChild(script);
+  };
+  script.src = SCRIPT_URL + '?callback=' + cbName;
+  document.body.appendChild(script);
 }
 
 function getMerged(){
