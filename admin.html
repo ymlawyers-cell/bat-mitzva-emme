@@ -247,7 +247,7 @@ function loadRsvps(){
 function getMerged(){
   const rsvpMap={};
   rsvps.forEach(r=>{
-    const name=(r['שם']||'').trim();
+    const name=String(r['שם']||'').trim();
     if(name) rsvpMap[name]={status:r['סטטוס'],count:r['כמות'],note:r['הערה']||'',date:r['תאריך']||''};
   });
 
@@ -259,7 +259,7 @@ function getMerged(){
     });
     // הוסף מי שענה אבל לא ברשימה
     rsvps.forEach(r=>{
-      const name=(r['שם']||'').trim();
+      const name=String(r['שם']||'').trim();
       if(name && !invitees.find(i=>i.name===name)){
         result.push({name,phone:'',group:'',status:r['סטטוס'],count:r['כמות'],note:r['הערה']||''});
       }
