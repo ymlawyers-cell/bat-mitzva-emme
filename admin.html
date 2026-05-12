@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<!-- saved from url=(0047)file:///C:/Users/Michael/Downloads/admin_8.html -->
 <html lang="he" dir="rtl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ניהול — בת המצווה של אמה</title>
-<link href="./admin_files/css2" rel="stylesheet">
-<script src="./admin_files/xlsx.full.min.js.download"></script>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
 html,body{min-height:100%;background:#F8F4EC;font-family:'Heebo',sans-serif;direction:rtl;}
@@ -89,10 +88,10 @@ textarea.finput{resize:none;}
   <p>דף זה מיועד למארגנים בלבד</p>
 </div>
 <nav class="nav">
-  <button class="nav-btn active" onclick="showSection(&#39;dashboard&#39;,this)">סקירה</button>
-  <button class="nav-btn" onclick="showSection(&#39;add&#39;,this)">הוסף</button>
-  <button class="nav-btn" onclick="showSection(&#39;import&#39;,this)">ייבוא</button>
-  <button class="nav-btn" onclick="showSection(&#39;reminders&#39;,this)">תזכורות</button>
+  <button class="nav-btn active" onclick="showSection('dashboard',this)">סקירה</button>
+  <button class="nav-btn" onclick="showSection('add',this)">הוסף</button>
+  <button class="nav-btn" onclick="showSection('import',this)">ייבוא</button>
+  <button class="nav-btn" onclick="showSection('reminders',this)">תזכורות</button>
 </nav>
 
 <!-- סקירה -->
@@ -103,19 +102,19 @@ textarea.finput{resize:none;}
     <div class="stat-box no"><div class="stat-num" id="s-no">0</div><div class="stat-lbl">לא מגיעים</div></div>
     <div class="stat-box wait"><div class="stat-num" id="s-wait">0</div><div class="stat-lbl">ממתינים</div></div>
   </div>
-  <div class="last-update" id="last-update">מרענן...</div>
-  <div class="error-note" id="fetch-error" style="display: block;">⚠️ לא ניתן להתחבר ל-Google Sheets. מציג נתונים מהדפדפן בלבד.</div>
+  <div class="last-update" id="last-update">טוען...</div>
+  <div class="error-note" id="fetch-error">⚠️ לא ניתן להתחבר ל-Google Sheets. מציג נתונים מהדפדפן בלבד.</div>
   <button class="outline-btn" onclick="loadRsvps()">רענן אישורים ↻</button>
   <button class="gold-btn" onclick="exportExcel()">הורד רשימה לאקסל ✦</button>
   <button class="outline-btn" style="color:#C05030;border-color:#F0C0A8;" onclick="resetAll()">אפס את כל נתוני הבדיקה 🗑️</button>
   <div class="filter-row">
-    <button class="flt on" onclick="filter(&#39;all&#39;,this)">הכל</button>
-    <button class="flt" onclick="filter(&#39;מגיע&#39;,this)">מגיעים</button>
-    <button class="flt" onclick="filter(&#39;לא מגיע&#39;,this)">לא מגיעים</button>
-    <button class="flt" onclick="filter(&#39;ממתין&#39;,this)">ממתינים</button>
+    <button class="flt on" onclick="filter('all',this)">הכל</button>
+    <button class="flt" onclick="filter('מגיע',this)">מגיעים</button>
+    <button class="flt" onclick="filter('לא מגיע',this)">לא מגיעים</button>
+    <button class="flt" onclick="filter('ממתין',this)">ממתינים</button>
   </div>
   <div class="filter-row" id="group-filters"></div>
-  <div class="guest-list" id="glist"><div class="empty">אין נתונים עדיין.<br>הוסף מוזמנים בלשונית "הוסף" ✦</div></div>
+  <div class="guest-list" id="glist"><div class="loading">טוען...</div></div>
 </div>
 
 <!-- הוסף מוזמן -->
@@ -147,7 +146,7 @@ textarea.finput{resize:none;}
 <div id="sec-import" class="section">
   <div class="card">
     <div class="card-title">ייבוא רשימה מאקסל</div>
-    <div class="import-area" onclick="document.getElementById(&#39;file-input&#39;).click()">
+    <div class="import-area" onclick="document.getElementById('file-input').click()">
       <span class="import-icon">📁</span>
       <div class="import-text">לחצי לבחירת קובץ Excel או CSV</div>
       <div class="import-sub">עמודות נדרשות: שם | טלפון | קבוצה</div>
@@ -174,12 +173,12 @@ textarea.finput{resize:none;}
     <div class="remind-item">
       <div class="remind-icon-box">✦</div>
       <div class="remind-info"><div class="remind-name">שבוע לפני האירוע</div><div class="remind-when">26.5.2026</div></div>
-      <span class="rbadge rs-ok" id="r1-badge">בעוד 14 ימים</span>
+      <span class="rbadge rs-ok" id="r1-badge">בעוד 20 ימים</span>
     </div>
     <div class="remind-item">
       <div class="remind-icon-box">✦</div>
       <div class="remind-info"><div class="remind-name">יום לפני האירוע</div><div class="remind-when">1.6.2026</div></div>
-      <span class="rbadge rs-ok" id="r2-badge">בעוד 20 ימים</span>
+      <span class="rbadge rs-ok" id="r2-badge">בעוד 26 ימים</span>
     </div>
     <button class="wa-btn" onclick="sendWeek()">שלח תזכורת — שבוע לפני</button>
     <button class="wa-btn gold" onclick="sendDay()">שלח תזכורת — יום לפני</button>
@@ -202,7 +201,7 @@ textarea.finput{resize:none;}
 
 </div>
 <script>
-const SCRIPT_URL='https://script.google.com/macros/s/AKfycbwCzcKMznH2V8Fv8sS7cYGRredoA-OeY_0giuYxauz78yDYBDHFTWnkvfrp5gyFuJLS/exec';
+const SCRIPT_URL='https://script.google.com/macros/s/AKfycbzeTT5QmjG7w5RkkbWAlzj4XmOM-iZ47WXX5E930u3HLN5jJTI9pZnUbQ37VT8xG4eLSA/exec';
 
 let invitees = JSON.parse(localStorage.getItem('ama_invitees')||'[]');
 let rsvps = [];
@@ -467,5 +466,4 @@ renderInvList();
 updateBadges();
 setInterval(loadRsvps,30000);
 </script>
-
 </body></html>
